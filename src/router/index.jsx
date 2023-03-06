@@ -16,7 +16,6 @@ const router = createBrowserRouter([
     path: "/home",
     element: <HomePage />,
     loader: () => {
-      // console.log(localStorage.getItem("access_token"), "==============");
       if (!localStorage.getItem("access_token")) return redirect("/");
       return null;
     },
